@@ -1,0 +1,375 @@
+
+  <!--   
+  <nav class="navbar navbar-expand-lg navbar-light bg-light " style="padding-top: 0;">
+    <div class=" container-fluid navegacionN">
+      <a class="navbar-brand">
+        <img src="assets/images/logoNotycov.png" alt="" width="130" height="33">
+      </a>      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav menuT ">
+          <a class="nav-link active " aria-current="page" [routerLink]= "['inicio']">Home</a>
+          <a class="nav-link" [routerLink]= "['localizar']" >Localizar</a>
+          <a class="nav-link" [routerLink]= "['sintomas']">Sintomas</a>
+          <a class="nav-link" [routerLink]= "['perfil']">Perfil</a>
+  
+        </div>
+      </div>
+    </div>
+  </nav>
+                     (click)="sumasi()"
+
+-->
+<body background ="">
+  
+  <div class="container formilarioSin">
+    <div class="sintomas p-l-55 p-r-55 p-t-65 p-b-54 ">
+      <div class="txt1">
+        <p class="pregin" >Registro de Síntomas</p>
+      </div>
+      <hr>
+
+    <form #miFormulario ="ngForm" class="preguntas">
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Has tenido fiebre en las últimas 24 horas? </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion1" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta1"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion1" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta1"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Tienes dificultad para respirar? </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                  type="radio" 
+                   name="opcion2" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta2"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion2" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta2"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Tienes tos? </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion3" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta3"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion3" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta3"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Sientes un cansancio extremo?        </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion4" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta4"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion4" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta4"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Tienes dolor de cabeza o jaqueca?
+        </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion5" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta5"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion5" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta5"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Tienes dolor o molestia generalizada en los músculos?
+        </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input"
+                   type="radio" 
+                   name="opcion6" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta6"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion6" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta6"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Tienes dolor de garganta? </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion7" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta7"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion7" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta7"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Tienes diarrea?        </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion8" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta8"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion8" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta8"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Se ha disminuido o ha desaparecido tu sentido del olfato o gusto?        </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion9" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta9"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion9" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta9"
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col-form-label"> ¿Tu naríz produce mucosidad?        </label>
+        <div class="">
+    
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+                   type="radio" 
+                   name="opcion10" 
+                   id="inlineRadio1" 
+                   value="si"
+                   [(ngModel)]="preguntas.pregunta10"
+                   required>
+            <label class="form-check-label" for="inlineRadio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input"
+                   type="radio" 
+                   name="opcion10" 
+                   id="inlineRadio2" 
+                   value="no"
+                   [(ngModel)]="preguntas.pregunta10"
+
+                   required>
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+
+        </div>
+
+      </div>
+      
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary float-end btnok"
+                  [disabled]="miFormulario.invalid"
+                  (click)="rango()"
+                  (click)="contcero()"
+                  
+                  >
+            Ok
+          </button>
+
+        </div>
+
+      </div>
+
+    
+<!--   /////////////////////////////////////////////////////////////////////-->
+
+
+
+    </form>
+
+    
+
+
+<!-- 
+
+    <h5>valor del formulari</h5>
+    <pre>{{miFormulario.value | json}}</pre>
+    <span>{{numero}}</span>
+    <br>
+    <span>{{numeroNo}}</span>
+
+    <br>
+
+    <h5>Valid</h5>
+    <pre>{{miFormulario.valid }}</pre>
+
+    <br>
+    <pre>Condiciones</pre>
+
+ -->
+
+  </div>
+
+
+</div>
+
+<section>
+  <div class="final">
+
+  </div>
+</section>
+</body>
+
+
+
